@@ -25,7 +25,9 @@ class Group < ApplicationRecord
     end
     
     def lastconcert
-        concerts.pluck(:date).max.strftime("%Y-%B-%A")
+        if concerts.count > 0
+            concerts.pluck(:date).max.strftime("%Y-%B-%A")
+        end
     end
 
     def maxattendees

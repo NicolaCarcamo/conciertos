@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @group.name %>
+</p>
+
+<p>
+  <strong>Miembros:</strong>
+  <%= @group.member %>
+</p>
+
+<p>
+  <strong>Fecha de debut:</strong>
+  <%= @group.debutdate %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @group.type %>
+</p>
+
+<p>
+  <strong>Conciertos hechos este mes:</strong>
+  <%= @group.lastmonth %>
+</p>
+
+<p>
+  <strong>Último concierto:</strong>
+  <%= @group.lastconcert %>
+</p>
+
+<p>
+  <strong>Mayor cantidad de asistentes:</strong>
+  <%= @group.maxattendees %>
+</p>
+
+<p>
+  <strong>Mayor duración de un concierto:</strong>
+  <%= @group.maxlength %> min
+</p>
+
+<%= link_to 'Edit', edit_group_path(@group) %> |
+<%= link_to 'Back', groups_path %>
